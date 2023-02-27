@@ -7,4 +7,4 @@ func MakeTemplate(path string) *template.Template {
 	return template.Must(template.ParseFiles(files...))
 }
 
-var HomeTmpl = MakeTemplate("views/templates/index.html")
+var HomeTmpl = MakeTemplate("views/templates/home.html")
