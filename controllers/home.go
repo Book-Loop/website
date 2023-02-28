@@ -4,6 +4,6 @@ import (
 	"net/http"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) error {
-	return HomeTmpl.Execute(w, nil)
+func Index(w http.ResponseWriter, r *http.Request) error {
+	return IndexTmpl.Execute(w, nil)
 }
