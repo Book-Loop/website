@@ -7,4 +7,7 @@ func MakeTemplate(path string) *template.Template {
 	return template.Must(template.ParseFiles(files...))
 }
 
-var IndexTmpl = MakeTemplate("views/templates/index.html")
+var (
+	IndexTmpl = MakeTemplate("views/templates/index.html")
+	HomeTmpl  = MakeTemplate("views/templates/home.html")
+)
