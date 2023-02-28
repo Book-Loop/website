@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/ibilalkayy/website/middleware"
 	"github.com/ibilalkayy/website/routes"
@@ -11,7 +12,11 @@ import (
 func Execute() error {
 	routes.Routes()
 	fmt.Println("Starting the server at :8080")
-	return http.ListenAndServe(":8080", nil)
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		port = "8080"
+	}
+	return http.ListenAndServe(":"+port, nil)
 }
 
 func main() {
