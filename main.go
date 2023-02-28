@@ -10,7 +10,7 @@ import (
 
 func Execute() error {
 	routes.Routes()
-	fmt.Println("Starting the server at :4000")
+	fmt.Println("Starting the server at :8080")
 	return http.ListenAndServe(":8080", nil)
 }
 

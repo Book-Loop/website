@@ -8,5 +8,5 @@ import (
 )
 
 func Routes() {
-	http.HandleFunc("/", middleware.ErrorHandling(controllers.Home))
+	http.HandleFunc("/", middleware.ErrorHandling(controllers.Index))
 }
